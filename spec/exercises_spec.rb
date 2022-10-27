@@ -1,5 +1,5 @@
 require 'rspec'
-require 'remove_dups'
+require 'exercises'
 
 
 #uniq
@@ -30,3 +30,16 @@ describe "two_sum" do
 
 end
 
+describe "my_transpose" do
+
+
+    let(:array1){[5, 0, 0,  0 ]}
+    let(:array2){[6, 0 ,0, 2]}
+    let(:array3){[7,0, 3, 4]}
+    let(:matrix){[array1, array2, array3]}
+
+    it "transposes a matrix" do
+        expect(my_transpose(matrix)).to eq([[5,6,7], [0,0,0],[0,0,3], [0,2,4]])
+
+    end
+end

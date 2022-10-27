@@ -24,3 +24,21 @@ class Array
 
     
 end
+
+def my_transpose(args)
+    
+    
+    transpose = []
+
+    (0...args[0].length).each do |j|
+        temp = []
+        
+        (0...args.length).each do |i|
+            temp << args[i][j]
+        end 
+
+        transpose << temp
+    end
+
+    transpose
+end
