@@ -32,7 +32,6 @@ end
 
 describe "my_transpose" do
 
-
     let(:array1){[5, 0, 0,  0 ]}
     let(:array2){[6, 0 ,0, 2]}
     let(:array3){[7,0, 3, 4]}
@@ -42,4 +41,18 @@ describe "my_transpose" do
         expect(my_transpose(matrix)).to eq([[5,6,7], [0,0,0],[0,0,3], [0,2,4]])
 
     end
+end
+
+describe "stock_picker" do 
+    let(:stocks1) { [7,1,5,3,6,4] }
+    let(:stocks2) { [7,6,4,3,1] }
+
+    it "returns the largest range between a minimum and a maximum where the minimum comes before the maximum" do
+        expect(stock_picker(stocks1)).to eq(5)
+    end
+
+    it "if there is not maximum value, return 0" do 
+        expect(stock_picker(stocks2)).to eq(0)
+    end
+
 end

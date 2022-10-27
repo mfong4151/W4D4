@@ -42,3 +42,23 @@ def my_transpose(args)
 
     transpose
 end
+
+
+def stock_picker(stocks)
+    res = 0
+    maxi = - 1.0 / 0
+    mini = 1.0 / 0
+
+    stocks.each do |price|
+        if price < mini
+            mini = price
+            maxi = price
+        end
+        if price > maxi
+            maxi = price
+            res = [res, maxi - mini].max 
+        end
+    end
+    
+    res
+end
