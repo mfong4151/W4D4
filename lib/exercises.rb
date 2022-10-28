@@ -59,6 +59,8 @@ def stock_picker(stocks)
             res = [res, maxi - mini].max 
         end
     end
-    
     res
 end
+
+
+def towers_of_hanoi
